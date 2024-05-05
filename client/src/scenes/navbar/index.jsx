@@ -56,7 +56,22 @@ const Navbar = () => {
             },
           }}
         >
-          Sociopedia
+          FitTribe
+        </Typography>
+
+        <Typography
+          fontWeight="bold"
+          fontSize="clamp(1rem, 2rem, 2.25rem)"
+          color="primary"
+          onClick={() => navigate("/fitnessHub")}
+          sx={{
+            "&:hover": {
+              color: theme.palette.primary.light,
+              cursor: "pointer",
+            },
+          }}
+        >
+          FitHub 
         </Typography>
         {isNonMobileScreens && (
           <FlexBetween

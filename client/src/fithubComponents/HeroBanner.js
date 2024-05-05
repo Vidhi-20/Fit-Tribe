@@ -21,7 +21,7 @@ const HeroBanner = () => {
                   fontWeight= "600"
                   fontSize= "26px"
                 >
-                  Fitness Club
+                  Fitness Hub
                 </Typography>
                 <Typography
                   color = "black"
