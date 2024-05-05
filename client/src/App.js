@@ -10,6 +10,7 @@ import { CssBaseline,ThemeProvider } from "@mui/material";
 import { createTheme } from "@mui/material/styles";
 import { themeSettings } from "./theme";
 import ExerciseDetail from "fithubPages/ExerciseDetail";
+import FitnessApp from "scenes/fitnessHub/index";
 function App() {
   const mode = useSelector((state)=> state.mode);
   const theme = useMemo(()=> createTheme(themeSettings(mode)), [mode]);
@@ -36,7 +37,7 @@ function App() {
           />
           <Route 
             path="/fitnessHub" 
-            element={<FitnessHub/>} 
+            element={<FitnessApp/>} 
           />
       <Route path="/exercise/:id" element={<ExerciseDetail />} />
         </Routes>
