@@ -86,8 +86,28 @@ const Navbar = () => {
               <LightMode sx={{ color: dark, fontSize: "25px" }} />
             )}
           </IconButton>
-          <Message sx={{ fontSize: "25px" }} />
-          <Notifications sx={{ fontSize: "25px" }} />
+          <Message
+            sx={{
+              fontSize: "25px",
+              "&:hover": {
+                // Apply styles on hover
+                backgroundColor: "rgba(0, 0, 0, 0.1)", // Grey background color
+                borderRadius: "100%", // Rounded border
+                padding: "0.1rem", // Increased padding for circle effect
+              },
+            }}
+          />
+          <Notifications
+            sx={{
+              fontSize: "25px",
+              "&:hover": {
+                // Apply styles on hover
+                backgroundColor: "rgba(0, 0, 0, 0.1)", // Grey background color
+                borderRadius: "100%", // Rounded border
+                padding: "0.1rem", // Increased padding for circle effect
+              },
+            }}
+          />
           <Help
             sx={{
               fontSize: "25px",
@@ -173,20 +193,40 @@ const Navbar = () => {
                 <LightMode sx={{ color: dark, fontSize: "25px" }} />
               )}
             </IconButton>
-            <Message sx={{ fontSize: "25px" }} />
-            <Notifications sx={{ fontSize: "25px" }} />
+            <Message
+              sx={{
+                fontSize: "25px",
+                "&:hover": {
+                  // Apply styles on hover
+                  backgroundColor: "rgba(0, 0, 0, 0.1)", // Grey background color
+                  borderRadius: "100%", // Rounded border
+                  padding: "0.1rem", // Increased padding for circle effect
+                },
+              }}
+            />
+            <Notifications
+              sx={{
+                fontSize: "25px",
+                "&:hover": {
+                  // Apply styles on hover
+                  backgroundColor: "rgba(0, 0, 0, 0.1)", // Grey background color
+                  borderRadius: "100%", // Rounded border
+                  padding: "0.1rem", // Increased padding for circle effect
+                },
+              }}
+            />
             <Help
               sx={{
                 fontSize: "25px",
                 "&:hover": {
+                  // Apply styles on hover
                   backgroundColor: "rgba(0, 0, 0, 0.1)", // Grey background color
-                  borderRadius: "50%", // Rounded border
+                  borderRadius: "100%", // Rounded border
                   padding: "0.1rem", // Increased padding for circle effect
                 },
               }}
               onClick={goToFAQPage} // Added onClick handler to navigate to FAQ page
             />
-
             <FormControl variant="standard" value={fullName}>
               <Select
                 value={fullName}
