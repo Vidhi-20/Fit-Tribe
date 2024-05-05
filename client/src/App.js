@@ -3,6 +3,7 @@ import HomePage from "scenes/homePage";
 import LoginPage from "scenes/loginPage";
 import ProfilePage from "scenes/profilePage";
 import FitnessHub from "scenes/fitnessHub";
+import HelpPage from "scenes/helpPage";
 import { useMemo } from "react";
 import { useSelector } from "react-redux";
 import { CssBaseline,ThemeProvider } from "@mui/material";
@@ -28,6 +29,10 @@ function App() {
           <Route 
             path="/profile/:userId" 
             element={isAuth ? <ProfilePage />:<Navigate to = "/" />} 
+          />
+          <Route 
+            path="/help" 
+            element={<HelpPage/>} 
           />
           <Route 
             path="/fitnessHub" 
