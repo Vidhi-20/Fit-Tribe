@@ -56,7 +56,7 @@ const Navbar = () => {
             },
           }}
         >
-          Sociopedia
+          FitTribe : Tribe up Level up
         </Typography>
         {isNonMobileScreens && (
           <FlexBetween
