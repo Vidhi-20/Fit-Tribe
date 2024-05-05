@@ -40,6 +40,9 @@ const Navbar = () => {
   const alt = theme.palette.background.alt;
 
   const fullName = `${user.firstName} ${user.lastName}`;
+  const goToFAQPage = () => {
+    navigate("/help");
+  };
 
   return (
     <FlexBetween padding="1rem 6%" backgroundColor={alt}>
@@ -100,7 +103,19 @@ const Navbar = () => {
           </IconButton>
           <Message sx={{ fontSize: "25px" }} />
           <Notifications sx={{ fontSize: "25px" }} />
-          <Help sx={{ fontSize: "25px" }} />
+          <Help
+            sx={{
+              fontSize: "25px",
+              "&:hover": {
+                // Apply styles on hover
+                backgroundColor: "rgba(0, 0, 0, 0.1)", // Grey background color
+                borderRadius: "100%", // Rounded border
+                padding: "0.1rem", // Increased padding for circle effect
+              },
+            }}
+            onClick={goToFAQPage} // Added onClick handler to navigate to FAQ page
+          />
+
           <FormControl variant="standard" value={fullName}>
             <Select
               value={fullName}
@@ -175,7 +190,18 @@ const Navbar = () => {
             </IconButton>
             <Message sx={{ fontSize: "25px" }} />
             <Notifications sx={{ fontSize: "25px" }} />
-            <Help sx={{ fontSize: "25px" }} />
+            <Help
+              sx={{
+                fontSize: "25px",
+                "&:hover": {
+                  backgroundColor: "rgba(0, 0, 0, 0.1)", // Grey background color
+                  borderRadius: "50%", // Rounded border
+                  padding: "0.1rem", // Increased padding for circle effect
+                },
+              }}
+              onClick={goToFAQPage} // Added onClick handler to navigate to FAQ page
+            />
+
             <FormControl variant="standard" value={fullName}>
               <Select
                 value={fullName}
