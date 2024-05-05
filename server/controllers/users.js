@@ -11,25 +11,28 @@ export const getUser = async(req, res)=> {
     }
 };
 
-export const getUserFriends = async(req,res)=>
-{
+export const getUserFriends = async (req, res) => {
     try {
         const { id } = req.params;
         const user = await User.findById(id);
-        
+
+        if (!Array.isArray(user.friends)) {
+            return res.status(404).json({ message: "User friends is not an array" });
+        }
+
         const friends = await Promise.all(
-            user.friends.map((id) => User.findById(id))
+            user.friends.map((friendId) => User.findById(friendId))
         );
-        const formattedFriends = friends.map(
-            ({_id,firstName,lastName,occupation,location,picturePath,goal})=> {
-                return {_id,firstName,lastName,occupation,location,picturePath,goal};
-            }
-        );
+        const formattedFriends = friends.map(({ _id, firstName, lastName, occupation, location, picturePath, goal }) => {
+            return { _id, firstName, lastName, occupation, location, picturePath, goal };
+        });
+
         res.status(200).json(formattedFriends);
-    }catch(err){
-        res.status(404).json({message: err.message})
+    } catch (err) {
+        res.status(404).json({ message: err.message });
     }
 };
+
 
 /*Update*/
 export const addRemoveFriend = async(req,res) => {

@@ -40,6 +40,9 @@ const Navbar = () => {
   const alt = theme.palette.background.alt;
 
   const fullName = `${user.firstName} ${user.lastName}`;
+  const goToFAQPage = () => {
+    navigate("/help");
+  };
 
   return (
     <FlexBetween padding="1rem 6%" backgroundColor={alt}>
@@ -56,7 +59,22 @@ const Navbar = () => {
             },
           }}
         >
-          FitTribe : Tribe up Level up
+          FitTribe
+        </Typography>
+
+        <Typography
+          fontWeight="bold"
+          fontSize="clamp(1rem, 2rem, 2.25rem)"
+          color="primary"
+          onClick={() => navigate("/fitnessHub")}
+          sx={{
+            "&:hover": {
+              color: theme.palette.primary.light,
+              cursor: "pointer",
+            },
+          }}
+        >
+          FitHub 
         </Typography>
         {isNonMobileScreens && (
           <FlexBetween
@@ -83,9 +101,41 @@ const Navbar = () => {
               <LightMode sx={{ color: dark, fontSize: "25px" }} />
             )}
           </IconButton>
-          <Message sx={{ fontSize: "25px" }} />
-          <Notifications sx={{ fontSize: "25px" }} />
-          <Help sx={{ fontSize: "25px" }} />
+          <Message
+            sx={{
+              fontSize: "25px",
+              "&:hover": {
+                // Apply styles on hover
+                backgroundColor: "rgba(0, 0, 0, 0.1)", // Grey background color
+                borderRadius: "100%", // Rounded border
+                padding: "0.1rem", // Increased padding for circle effect
+              },
+            }}
+          />
+          <Notifications
+            sx={{
+              fontSize: "25px",
+              "&:hover": {
+                // Apply styles on hover
+                backgroundColor: "rgba(0, 0, 0, 0.1)", // Grey background color
+                borderRadius: "100%", // Rounded border
+                padding: "0.1rem", // Increased padding for circle effect
+              },
+            }}
+          />
+          <Help
+            sx={{
+              fontSize: "25px",
+              "&:hover": {
+                // Apply styles on hover
+                backgroundColor: "rgba(0, 0, 0, 0.1)", // Grey background color
+                borderRadius: "100%", // Rounded border
+                padding: "0.1rem", // Increased padding for circle effect
+              },
+            }}
+            onClick={goToFAQPage} // Added onClick handler to navigate to FAQ page
+          />
+
           <FormControl variant="standard" value={fullName}>
             <Select
               value={fullName}
@@ -158,9 +208,40 @@ const Navbar = () => {
                 <LightMode sx={{ color: dark, fontSize: "25px" }} />
               )}
             </IconButton>
-            <Message sx={{ fontSize: "25px" }} />
-            <Notifications sx={{ fontSize: "25px" }} />
-            <Help sx={{ fontSize: "25px" }} />
+            <Message
+              sx={{
+                fontSize: "25px",
+                "&:hover": {
+                  // Apply styles on hover
+                  backgroundColor: "rgba(0, 0, 0, 0.1)", // Grey background color
+                  borderRadius: "100%", // Rounded border
+                  padding: "0.1rem", // Increased padding for circle effect
+                },
+              }}
+            />
+            <Notifications
+              sx={{
+                fontSize: "25px",
+                "&:hover": {
+                  // Apply styles on hover
+                  backgroundColor: "rgba(0, 0, 0, 0.1)", // Grey background color
+                  borderRadius: "100%", // Rounded border
+                  padding: "0.1rem", // Increased padding for circle effect
+                },
+              }}
+            />
+            <Help
+              sx={{
+                fontSize: "25px",
+                "&:hover": {
+                  // Apply styles on hover
+                  backgroundColor: "rgba(0, 0, 0, 0.1)", // Grey background color
+                  borderRadius: "100%", // Rounded border
+                  padding: "0.1rem", // Increased padding for circle effect
+                },
+              }}
+              onClick={goToFAQPage} // Added onClick handler to navigate to FAQ page
+            />
             <FormControl variant="standard" value={fullName}>
               <Select
                 value={fullName}

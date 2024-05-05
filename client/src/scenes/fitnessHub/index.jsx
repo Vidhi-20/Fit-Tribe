@@ -6,7 +6,7 @@ import ExerciseDetail from '../../fithubPages/ExerciseDetail.js';
 import Home from '../../fithubPages/Home';
 import Navbar from '../../fithubComponents/Navbar';
 import Footer from 'fithubComponents/Footer';
-const App = () => {
+const FitnessApp = () => {
     return (
         <Box width = "400px" sx = {{width : {xl : '1488px'}}} m = "auto">
             <Navbar/>
@@ -19,4 +19,4 @@ const App = () => {
     )
 }
 
-export default App
+export default FitnessApp

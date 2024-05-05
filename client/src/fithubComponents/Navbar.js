@@ -20,10 +20,10 @@ const Navbar = () => {
           fontSize= "24px"
           alignItems= "flex-end"
       >
-        <Link to  ="/fitnessHub" style = {{textDecoration : 'none', color : '#526D82', borderBottom : '3px solid #1E0342'}}>
+        <Link to  ="/home" style = {{textDecoration : 'none', color : '#526D82', borderBottom : '3px solid #1E0342'}}>
           Home
         </Link>
-        < a href = "#exercise" style = {{textDecoration : 'none', color : '#526D82'}}>Exercises</a>
+        
       </Stack>
     </Stack>
   )
