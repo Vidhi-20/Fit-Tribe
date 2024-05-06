@@ -249,7 +249,7 @@ export const posts = [
     location: "Seattle, WA",
     description: "Just finished meal prepping for the week! Healthy eating is key to a healthy lifestyle! #healthy #mealprep #nutrition",
     picturePath: "p3.jpeg",
-    userPicturePath: "profilepic10.jpg",
+    userPicturePath: "profilepic10.jpeg",
     likes: new Map([
       [userIds[1], true],
       [userIds[3], true],
