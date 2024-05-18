@@ -14,22 +14,21 @@ const AdvertWidget = () => {
         <Typography color={dark} variant="h5" fontWeight="500">
           Sponsored
         </Typography>
-        <Typography color={medium}>Create Ad</Typography>
+        <Typography color={medium}>HyperVision Gym</Typography>
       </FlexBetween>
       <img
         width="100%"
         height="auto"
         alt="advert"
-        src="http://localhost:4000/assets/info4.jpeg"
+        src="./assets/subscription.jpeg"
         style={{ borderRadius: "0.75rem", margin: "0.75rem 0" }}
       />
       <FlexBetween>
-        <Typography color={main}>MikaCosmetics</Typography>
-        <Typography color={medium}>mikacosmetics.com</Typography>
+        <Typography color={main}>HyperVision Gym</Typography>
+        <Typography color={medium}>www.hypervision.com</Typography>
       </FlexBetween>
       <Typography color={medium} m="0.5rem 0">
-        Your pathway to stunning and immaculate beauty and made sure your skin
-        is exfoliating skin and shining like light.
+        Transform your fitness journey at HyperVision Gym! With state-of-the-art equipment, expert trainers, and diverse classes, we're here to help you achieve your fitness goals. Join us today and unleash your full potential!
       </Typography>
     </WidgetWrapper>
   );
